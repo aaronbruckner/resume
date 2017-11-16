@@ -1,0 +1,78 @@
+// Color Constants
+$primaryColor: #606060;
+$secondaryColor: #d3d3d3;
+$sectionColor: #417df4;
+
+// Font Constants
+$nameHeaderFontSize: 3em;
+$sectionHeaderFontSize: 1.5em;
+
+// Styling
+body {
+  background: rgb(204,204,204);
+}
+
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  box-sizing: border-box;
+}
+
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+  padding: 50pt 50pt
+}
+
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+h1 {
+  font-size: $nameHeaderFontSize;
+}
+
+h2:before {
+  background-color: $sectionColor;
+  content: "";
+  display: inline-block;
+  height: 0.5rem;
+  position: relative;
+  vertical-align: middle;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.nameHeader {
+  text-align: right;
+}
+
+.nameHeader .firstName {
+  color: $secondaryColor;
+}
+
+.nameHeader .lastName {
+  color: $primaryColor;
+}
+
+.summary {
+  margin-top: 1em;
+}
+
+//
+
+.experienceItem {
+  .dateRange {
+    display: inline;
+  }
+
+  h3 {
+    display: inline;
+  }
+}
